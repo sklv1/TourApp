@@ -1,0 +1,23 @@
+﻿<Window x:Class="TourApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TourApp"
+        mc:Ignorable="d"
+        Title="Туристическая фирма" Height="450" Width="800" MinHeight="450" MinWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#bae3e8"></Grid>
+        <Image Source="Resources/logo_full_color.png" HorizontalAlignment="Left"></Image>
+        <TextBlock Text="Путешествуй по России" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Grid Grid.Row="2" Background="#445c93"></Grid>
+        <Frame Grid.Row="1" Name="MainFrame" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden"></Frame>
+        <Button Content="Назад" Name="Btn_Back" HorizontalAlignment="Right" Click="BtnBack_Click"></Button>
+        <Button Content="Редактировать" Name="Btn_Upd" HorizontalAlignment="Right" Click="Btn_Upd_Click"></Button>
+    </Grid>
+</Window>
